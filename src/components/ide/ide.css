@@ -1,0 +1,118 @@
+.editor{
+    width: 50%;
+    font-family: monospace;
+    text-align: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.center{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.langSelect{
+    width: 15%;
+    padding: 0.5%;
+}
+
+.inline{
+    display: inline-block;
+}
+
+th{
+    width: 50%;
+}
+
+.actions{
+    border-radius: 15px;
+    width: 7.5%;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+}
+
+#run{
+    color: white;
+    background-color: #e83e8c;
+}
+
+#running{
+    color: black;
+    background-color: #00E69B;
+}
+
+#clear{
+    color: white;
+    background-color: #1E0A14;
+}
+
+.wd65{
+    width: 65%;
+}
+
+.wd50{
+    width: 50%;
+}
+
+textarea{
+    width: 100%;
+    resize: none;
+    height: 200px;
+    font-size: small;
+}
+
+.inp{
+    border-radius: 15px 20px 20px 5px;
+}
+
+.out{
+    border-radius: 20px 15px 5px 20px;
+}
+
+/*.io{
+    width: 100%;
+    height: 200px;
+    display: inline-flex;
+    float: auto;
+    }
+
+.iotable{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    width: 65%;
+    border: 1px solid grey;
+    border-radius: 16px;
+}
+
+.iotextarea{
+    width: 100%;
+    top: 0; left: 0; right: 0; bottom: 0;
+    position: relative;
+    box-sizing: border-box;
+    resize: none;
+}*/
+
+.bottomPadding{
+    padding-bottom: 10px;
+}
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.btnBar {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+th{
+    color: whitesmoke !important;
+}

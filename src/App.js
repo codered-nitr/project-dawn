@@ -1,25 +1,34 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css'
+import NavBar from './components/NavBar'
+import IDE from './components/ide'
+import Home from './components/home'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Apply from './components/apply';
+import Footer from './components/footer';
+import Maintenance from './components/maintenance';
+import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="appBody">
+        <NavBar />
+        <hr />
+        <Switch>
+          <Route exact path = "/" component = {Home} />
+          <Route path = "/about-us" component = {Maintenance} />
+          <Route path = "/enigma" component = {Maintenance} />
+          <Route path = "/ide" component = {IDE} />
+          <Route path = "/apply" component = {Maintenance} />
+          <Route path = "/login" component = {Maintenance} />
+          <Route path = "/signup" component = {Maintenance} />
+        </Switch>
+      </div>
+      <Footer />
+    </Router>
   );
 }
 

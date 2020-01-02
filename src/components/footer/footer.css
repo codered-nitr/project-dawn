@@ -1,0 +1,44 @@
+.foot{
+  background-color: #211b31;
+  height: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 15px;
+}
+
+.f-inline{
+  display: inline;
+  width: 20%;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+}
+
+.f-title{
+  color: #FA3264;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-bottom: 10px;
+  text-decoration: underline dotted;
+}
+
+.f-body{
+  color: whitesmoke;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 13.5px;
+  padding-bottom: 10px;
+}
+
+.sub-footer{
+  padding-top: 10px;
+  color: whitesmoke;
+  background-color: black;
+  height: auto;
+  max-width: 100%;
+}
+
+.cinfo{
+  color: #32FFC8;
+  font-size: 1.25em;
+}
