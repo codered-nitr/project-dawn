@@ -27,13 +27,13 @@ class NavBar extends Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href={process.env.PUBLIC_URL + "/enigma"}>Enigma-NITR</Nav.Link>
-            <Nav.Link href={process.env.PUBLIC_URL + "/ide"}>IDE</Nav.Link>
-            <Nav.Link href={process.env.PUBLIC_URL + "/apply"}>Join</Nav.Link>
+            <Nav.Link href="/enigma">Enigma-NITR</Nav.Link>
+            <Nav.Link href="/ide">IDE</Nav.Link>
+            <Nav.Link href="/apply">Join</Nav.Link>
           </Nav>
           <Nav>
-            <Nav.Link href={process.env.PUBLIC_URL + "/login"}>Login</Nav.Link>
-            <Nav.Link href={process.env.PUBLIC_URL + "/signup"}>SignUp</Nav.Link>
+            <Nav.Link href="/login">Login</Nav.Link>
+            <Nav.Link href="/signup">SignUp</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
