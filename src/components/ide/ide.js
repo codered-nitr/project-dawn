@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import './ide.css'
+import '../../css/ide.css'
 import Select from 'react-select'
 import AceEditor from 'react-ace'
 
@@ -58,7 +58,7 @@ class IDE extends Component{
 
   render() {
     return(
-      <div className = "ide" id = "ide">
+      <div className = "ide bottomPadding" id = "ide">
         <div className = "center bottomPadding">
           <span style = {{color: "#ffffff"}}>Select Language:</span> <Select
             className = "inline langSelect"

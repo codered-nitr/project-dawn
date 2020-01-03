@@ -1,5 +1,5 @@
 import React from 'react'
-import './footer.css'
+import '../../css/footer.css'
 import { IconContext } from 'react-icons'
 import { TiSocialFacebookCircular, TiSocialInstagramCircular, TiSocialLinkedinCircular, TiSocialGithubCircular } from 'react-icons/ti'
 import { GiTechnoHeart } from 'react-icons/gi'

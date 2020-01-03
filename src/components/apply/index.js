@@ -2,7 +2,7 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form, Col, Button } from 'react-bootstrap'
 
-import './apply.css'
+import '../../css/apply.css'
 
 const Apply = () => {
   const onSubmit = event => {

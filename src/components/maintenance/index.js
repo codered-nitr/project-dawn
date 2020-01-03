@@ -1,5 +1,5 @@
 import React from 'react'
-import './maintenance.css'
+import '../../css/maintenance.css'
 
 const Maintenance = () => {
   return(

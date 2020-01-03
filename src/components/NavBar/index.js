@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import './nav.css'
+import '../../css/nav.css'
 
 class NavBar extends Component {
   constructor(props) {

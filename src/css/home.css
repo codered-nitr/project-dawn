@@ -1,10 +1,11 @@
 .contain{
-  width: auto;
+  width: 100%;
   height: 600px;
 }
 
 .d-block{
   display: block;
+  justify-content: center;
 }
 
 img{
@@ -12,6 +13,11 @@ img{
   max-height: 100%;
   margin-left: auto;
   margin-right: auto;
+  outline: none;
+}
+
+img:focus{
+  outline: none;
 }
 
 .center{
