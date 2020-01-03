@@ -15,7 +15,7 @@ function App() {
   return (
     <div className = "area rain">
       <Helmet><title>Code Red NIT-R</title></Helmet>
-      <HashRouter basename = '/project-dawn/'>
+      <Router basename = '/'>
         <div className="appBody">
           <NavBar />
           <hr />
@@ -30,7 +30,7 @@ function App() {
           </Switch>
           <Footer />
         </div>
-      </HashRouter>
+      </Router>
     </div>
   );
 }
