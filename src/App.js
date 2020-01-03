@@ -9,10 +9,12 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Apply from './components/apply'
 import Footer from './components/footer'
 import Maintenance from './components/maintenance'
+import { Helmet } from 'react-helmet'
 
 function App() {
   return (
     <div className = "area rain">
+      <Helmet><title>Code Red NIT-R</title></Helmet>
       <Router>
         <div className="appBody">
           <NavBar />
