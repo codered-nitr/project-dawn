@@ -9,9 +9,6 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Apply from './components/apply'
 import Footer from './components/footer'
 import Maintenance from './components/maintenance'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import $ from 'jquery'
 
 function App() {
   return (

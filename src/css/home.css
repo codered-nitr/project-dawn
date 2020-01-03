@@ -29,3 +29,11 @@ img:focus{
   align-content: center;
   text-align: center;
 }
+
+.carousel-item{
+  height: 600px;
+}
+
+.carousel-indicators{
+  bottom: -40px;
+}
