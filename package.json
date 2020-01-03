@@ -13,6 +13,7 @@
     "classnames": "^2.2.6",
     "compass-mixins": "^0.12.10",
     "express": "^4.17.1",
+    "gh-pages": "^2.1.1",
     "holderjs": "^2.9.6",
     "jquery": "^3.4.1",
     "morgan": "^1.9.1",
@@ -34,7 +35,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -53,5 +56,6 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.2"
-  }
+  },
+  "homepage": "http://codered-nitr.github.io"
 }
