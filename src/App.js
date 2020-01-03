@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import NavBar from './components/NavBar'
 import IDE from './components/ide'
 import Home from './components/home'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, HashRouter, Switch } from 'react-router-dom'
 import Apply from './components/apply'
 import Footer from './components/footer'
 import Maintenance from './components/maintenance'
@@ -15,7 +15,7 @@ function App() {
   return (
     <div className = "area rain">
       <Helmet><title>Code Red NIT-R</title></Helmet>
-      <Router>
+      <HashRouter basename = '/'>
         <div className="appBody">
           <NavBar />
           <hr />
@@ -30,7 +30,7 @@ function App() {
           </Switch>
           <Footer />
         </div>
-      </Router>
+      </HashRouter>
     </div>
   );
 }
