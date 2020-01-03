@@ -15,7 +15,7 @@ function App() {
   return (
     <div className = "area rain">
       <Helmet><title>Code Red NIT-R</title></Helmet>
-      <Router basename = '/'>
+      <Router basename = {process.env.PUBLIC_URL}>
         <div className="appBody">
           <NavBar />
           <hr />
