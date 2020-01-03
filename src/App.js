@@ -12,23 +12,24 @@ import Maintenance from './components/maintenance'
 
 function App() {
   return (
-    <Router>
-      <div className="appBody area rain">
-        <NavBar />
-        <hr />
-        <ul class="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
-        <Switch>
-          <Route exact path = "/" component = {Home} />
-          <Route path = "/about-us" component = {Maintenance} />
-          <Route path = "/enigma" component = {Maintenance} />
-          <Route path = "/ide" component = {IDE} />
-          <Route path = "/apply" component = {Maintenance} />
-          <Route path = "/login" component = {Maintenance} />
-          <Route path = "/signup" component = {Maintenance} />
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <div className = "area rain">
+      <Router>
+        <div className="appBody">
+          <NavBar />
+          <hr />
+          <ul className="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+          <Switch>
+            <Route exact path = "/" component = {Home} />
+            <Route path = "/enigma" component = {Maintenance} />
+            <Route path = "/ide" component = {IDE} />
+            <Route path = "/apply" component = {Maintenance} />
+            <Route path = "/login" component = {Maintenance} />
+            <Route path = "/signup" component = {Maintenance} />
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </div>
   );
 }
 

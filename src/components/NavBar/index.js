@@ -27,7 +27,6 @@ class NavBar extends Component {
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link href="/about-us">About Us</Nav.Link>
             <Nav.Link href="/enigma">Enigma-NITR</Nav.Link>
             <Nav.Link href="/ide">IDE</Nav.Link>
             <Nav.Link href="/apply">Join</Nav.Link>

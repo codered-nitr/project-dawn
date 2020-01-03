@@ -35,5 +35,18 @@ img:focus{
 }
 
 .carousel-indicators{
-  bottom: -40px;
+  bottom: -37px;
+}
+
+@keyframes bounce-anim{
+  0% {transform: translateY(0);}
+  50% {transform: translateY(-30px);}
+  100% {transform: translateY(0);}
+}
+
+.bounce{
+  animation: ease-in-out;
+  animation-duration: 2s;
+  animation-name: bounce-anim;
+  animation-iteration-count: infinite;
 }

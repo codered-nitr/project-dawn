@@ -10,8 +10,36 @@
 }
 
 .appBody{
-  width: 95%;
+  background-image: url('../img/code-red.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
   margin-left: auto;
   margin-right: auto;
-  padding-bottom: 10px;
+}
+
+html{
+  scroll-behavior: smooth;
+  --scrollbarBG: #050505;
+  --thumbBG: #FA3264;
+}
+
+body::-webkit-scrollbar{
+  width: 10px;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body{
+  scrollbar-width: thin;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG) ;
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
