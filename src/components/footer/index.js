@@ -8,7 +8,7 @@ import { DiOpensource } from 'react-icons/di'
 
 const Footer = () => {
   return(
-    <div>
+    <div className = "d-block">
       <div className = "foot">
         <div className = "about f-inline">
           <div className = "f-title">ABOUT</div>

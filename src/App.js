@@ -13,7 +13,7 @@ import { Helmet } from 'react-helmet'
 
 function App() {
   return (
-    <div className = "area rain">
+    <div className = "area">
       <Helmet><title>Code Red NIT-R</title></Helmet>
       <Router>
         <div className="appBody">

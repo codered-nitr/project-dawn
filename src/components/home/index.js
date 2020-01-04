@@ -20,7 +20,7 @@ const Home = () => {
           <Carousel.Item><img src = {require('../../img/CodeRed Inductions.png')} /></Carousel.Item>
         </Carousel>
       </div>
-      <div ref = {aboutRef}>
+      <div ref = {aboutRef} className = "">
         <About />
       </div>
     </div>

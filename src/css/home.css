@@ -1,6 +1,6 @@
 .contain{
   width: 100%;
-  height: 600px;
+  height: auto;
 }
 
 .d-block{
@@ -49,4 +49,8 @@ img:focus{
   animation-duration: 2s;
   animation-name: bounce-anim;
   animation-iteration-count: infinite;
+}
+
+.topPadding{
+  padding-top: 20px;
 }

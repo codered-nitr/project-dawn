@@ -24,8 +24,7 @@
     height: 20px;
     background: rgba(255, 255, 255, 0.2);
     animation: animate 25s linear infinite;
-    bottom: -150px;
-    
+    bottom: -150px;    
 }
 
 .circles li:nth-child(1){
@@ -101,7 +100,7 @@
     width: 150px;
     height: 150px;
     animation-delay: 0s;
-    animation-duration: 11s;
+    animation-duration: 20s;
 }
 
 
