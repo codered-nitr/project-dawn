@@ -13,10 +13,16 @@
   background-image: url('../img/code-red.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: 100% auto;
   background-attachment: fixed;
   margin-left: auto;
   margin-right: auto;
+}
+
+@media screen and (max-device-width: 1024px){
+  .appBody{
+    background-attachment: scroll;
+  }
 }
 
 html{
