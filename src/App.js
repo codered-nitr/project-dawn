@@ -19,7 +19,6 @@ function App() {
         <div className="appBody">
           <NavBar />
           <hr />
-          <ul className="circles"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
           <Switch>
             <Route exact path = "/" component = {Home} />
             <Route path = "/enigma" component = {Maintenance} />

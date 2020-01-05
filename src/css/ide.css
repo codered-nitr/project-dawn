@@ -1,5 +1,6 @@
 .editor{
     width: 50%;
+    min-width: 300px;
     font-family: monospace;
     text-align: auto;
     margin-left: auto;
@@ -28,6 +29,7 @@ th{
 .actions{
     border-radius: 15px;
     width: 7.5%;
+    min-width: 75px;
     text-align: center;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -53,6 +55,7 @@ th{
 
 .wd65{
     width: 65%;
+    min-width: 400px;
 }
 
 .wd50{
@@ -74,30 +77,6 @@ textarea{
     border-radius: 20px 15px 5px 20px;
 }
 
-/*.io{
-    width: 100%;
-    height: 200px;
-    display: inline-flex;
-    float: auto;
-    }
-
-.iotable{
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    width: 65%;
-    border: 1px solid grey;
-    border-radius: 16px;
-}
-
-.iotextarea{
-    width: 100%;
-    top: 0; left: 0; right: 0; bottom: 0;
-    position: relative;
-    box-sizing: border-box;
-    resize: none;
-}*/
-
 .bottomPadding{
     padding-bottom: 10px;
 }
@@ -115,4 +94,8 @@ input:focus, textarea:focus, select:focus{
 
 th{
     color: whitesmoke !important;
+}
+
+.ide{
+    z-index: -1;
 }

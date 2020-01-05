@@ -4,12 +4,14 @@ import { IconContext } from 'react-icons'
 import { Carousel } from 'react-bootstrap'
 import { AiFillCaretDown } from 'react-icons/ai'
 import About from './about'
+import Fly from './fly'
 
 const Home = () => {
   const aboutRef = useRef(null)
   const scrollToAbout = () => window.scrollTo(0, aboutRef.current.offsetTop)
   return(
     <div className = "bottomPadding contain center">
+      <Fly />
       <div className = "bottomPadding">
         <Carousel>
           <Carousel.Item><Carousel.Caption><div className = "bounce" onClick = {scrollToAbout}>
@@ -28,3 +30,5 @@ const Home = () => {
 }
 
 export default Home
+
+export { Fly }

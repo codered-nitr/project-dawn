@@ -130,7 +130,7 @@ class About extends Component {
           </Container>
           :
           <div className = "ctr about topPadding">
-            <Carousel fade interval = {4000}>
+            <Carousel fade interval = {3500}>
               {cards.map(card => (
                 <Carousel.Item>
                   <div className = "colcen"><Col>{card}</Col></div>
