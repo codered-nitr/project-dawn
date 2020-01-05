@@ -92,7 +92,7 @@ class About extends Component {
     console.log(this.state.wReset)
     return(
       <div>
-        {this.state.wReset == 2 ?
+        {this.state.wReset === 2 ?
           <Container>
             <Row noGutters className = "justify-content-md-center bottomPadding topPadding">
               <Col>{cards[0]}</Col>
@@ -110,7 +110,7 @@ class About extends Component {
               <Col></Col>
             </Row>
           </Container>
-          : this.state.wReset == 1 ?
+          : this.state.wReset === 1 ?
           <Container>
             <Row className = "justify-content-md-center bottomPadding topPadding">
               <div className = "colcen"><Col>{cards[0]}</Col></div>
