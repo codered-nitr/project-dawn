@@ -5,18 +5,17 @@
   position: relative;
   bottom: 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
   padding-top: 15px;
   margin-top: 20px;
 }
 
-.f-inline{
-  display: inline;
-  width: 20%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+@media screen and (max-width: 770px){
+  .col{
+    max-width: 20rem;
+  }
 }
 
 .f-title{
@@ -31,6 +30,11 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 13.5px;
   padding-bottom: 10px;
+}
+
+.r-seg{
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .sub-footer{

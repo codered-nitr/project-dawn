@@ -35,12 +35,6 @@ img:focus{
   height: 600px;
 }
 
-@media only screen and (max-width: 770){
-  .carousel-item{
-    height: 500px;
-  }
-}
-
 .carousel{
   max-height: 600px;
 }
@@ -75,5 +69,6 @@ img:focus{
   margin-right: auto;
   width: 19.5rem;
   object-fit: contain;
-  max-height: 500px;
+  max-height: 510px;
+  overflow: hidden;
 }
