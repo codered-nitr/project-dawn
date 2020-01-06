@@ -18,7 +18,7 @@ const Enigma = () => {
             </p>
             <p className = "spl" style = {{fontSize: "1.25rem"}}>A workshop series to kickstart your competitive programming journey!</p>
           </Jumbotron>
-          <iframe name="ifrm" id="ifrm" style={{paddingLeft: "6%", paddingRight: "6%", width: "100%", height: "400px", objectFit: "contain", overflow: "hidden", position: "relative", border: "2px solid #FA3264", borderRadius: "10px"}} src="https://i.imgur.com/P0M0oat.png" scrolling="yes" allowTransparency="true" frameBorder = {0} ></iframe>
+          <iframe name="ifrm" id="ifrm" style={{paddingLeft: "5.75%", paddingRight: "5.75%", width: "100%", height: "400px", objectFit: "contain", overflow: "hidden", position: "relative", border: "2px solid #FA3264", borderRadius: "10px"}} src={require('../../img/univ.png')} scrolling="yes" allowTransparency="true" frameBorder = {0} ></iframe>
         </div>
         <div className = "bottomPadding">
           <Jumbotron className = "black-back">
