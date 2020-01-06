@@ -1,7 +1,27 @@
 .w50{
-  width: 50%;
+  width: 55%;
+  padding: 10px 10px;
+  border-right: 2px solid lightslategrey;
+  box-sizing: border-box;
+  background-color: black;
 }
 
 .form-label{
-  color: whitesmoke !important;
+  color: #f8114b !important;
+  font-weight: bold;
+  line-height: 1.25;
+}
+
+#submit{
+  display: block;
+  margin: auto;
+  width: 50%;
+}
+
+Form .check-box{
+  margin-left: 10px;
+  color: rgb(44, 139, 202);
+  font-style: monospace;
+  font-weight: 500;
+  line-height: 1.25;
 }
