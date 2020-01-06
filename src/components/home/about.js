@@ -89,7 +89,6 @@ class About extends Component {
   }
 
   render() {
-    console.log(this.state.wReset)
     return(
       <div>
         {this.state.wReset === 2 ?

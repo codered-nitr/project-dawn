@@ -5,11 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import NavBar from './components/NavBar'
 import IDE from './components/ide'
 import Home from './components/home'
-import { BrowserRouter as Router, Route, HashRouter, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Apply from './components/apply'
 import Footer from './components/footer'
 import Maintenance from './components/maintenance'
 import { Helmet } from 'react-helmet'
+import Enigma from './components/enigma'
 
 function App() {
   return (
@@ -21,9 +22,9 @@ function App() {
           <hr />
           <Switch>
             <Route exact path = "/" component = {Home} />
-            <Route path = "/enigma" component = {Maintenance} />
+            <Route path = "/enigma" component = {Enigma} />
             <Route path = "/ide" component = {IDE} />
-            <Route path = "/apply" component = {Apply} />
+            <Route path = "/apply" component = {Maintenance} />
             <Route path = "/login" component = {Maintenance} />
             <Route path = "/signup" component = {Maintenance} />
           </Switch>
