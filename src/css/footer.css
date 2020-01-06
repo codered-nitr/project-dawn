@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 770px){
   .col{
-    max-width: 20rem;
+    min-width: 250px;
   }
 }
 
@@ -30,6 +30,7 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 13.5px;
   padding-bottom: 10px;
+  text-align: justify;
 }
 
 .r-seg{
@@ -48,4 +49,13 @@
 .cinfo{
   color: #62C144;
   font-size: 1.25em;
+}
+
+.f-sec{
+  margin-right: 13px;
+}
+
+.nitrLogo{
+  max-width: 340px;
+  max-height: 340px;
 }

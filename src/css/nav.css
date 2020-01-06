@@ -26,3 +26,27 @@
   transform: scale(1.25);
   transition: all .2s ease-in-out;
 }
+
+@font-face{
+  font-family: madeEvolve;
+  src: url(madeEvolveSansBold.otf)
+}
+
+.nav-brand{
+  font-family: madeEvolve;
+  padding-right: 7px;
+  border-right: 2px solid #FA3264;
+}
+
+@keyframes fillRed{
+  0% {color: whitesmoke;}
+  50% {color: #FA3264;}
+  100% {color: whitesmoke;}
+}
+
+.red{
+  animation-name: fillRed;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}

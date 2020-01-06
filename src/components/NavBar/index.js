@@ -23,7 +23,7 @@ class NavBar extends Component {
   render() {
     return(
       <Navbar className={this.state.scrolled?"color-nav":""} collapseOnSelect expand="md" variant="dark" sticky="top" ref={elem => this.elem = elem}>
-        <Navbar.Brand className="nav-brand" href="/">CODE RED</Navbar.Brand>
+        <Navbar.Brand className="nav-brand" href="/">CODE <span className = "red">RED</span></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="mr-auto">

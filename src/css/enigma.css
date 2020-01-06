@@ -1,0 +1,18 @@
+.black-back{
+  background-color: #050505;
+  color: whitesmoke;
+  text-align: justify;
+}
+
+.spl{
+  color: #FA3264 !important;
+  text-align: center;
+}
+
+.jfy{
+  text-align: justify !important;
+}
+
+.jumbotron{
+  margin-bottom: 10px;
+}
