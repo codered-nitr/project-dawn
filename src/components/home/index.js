@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import '../../css/home.css'
 import { IconContext } from 'react-icons'
-import { Carousel, Row, Image } from 'react-bootstrap'
+import { Carousel, Row, Image, Button } from 'react-bootstrap'
 import { AiFillCaretDown } from 'react-icons/ai'
 import About from './about'
 import Fly from './fly'
@@ -26,7 +26,12 @@ const Home = () => {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item><img src = {require('../../img/Enigma Coming soon.png')} /></Carousel.Item>
-          <Carousel.Item><img src = {require('../../img/EnigmaTopics.png')} /></Carousel.Item>
+          <Carousel.Item>
+            <img src = {require('../../img/EnigmaTopics.png')} />
+            <Carousel.Caption>
+              <a href="https://bit.ly/enigmanitr" target="_blank"><Button variant="success">Register Now!</Button></a>
+            </Carousel.Caption>
+          </Carousel.Item>
           <Carousel.Item><img src = {require('../../img/CodeRed Inductions.png')} /></Carousel.Item>
         </Carousel>
       </div>

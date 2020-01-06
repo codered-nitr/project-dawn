@@ -48,7 +48,7 @@ const Footer = () => {
                 Odisha, India.
                 PIN:769008</p>
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7804.545294654541!2d84.90194065787612!3d22.250986110936346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a201e7fc7810e25%3A0x93c2da55e52c71b2!2sStudent%20Activity%20Center!5e0!3m2!1sen!2sin!4v1578293706149!5m2!1sen!2sin" frameborder="0" style={{border: 0}} allowfullscreen=""></iframe>
-                <p><strong className = "cinfo">Email: </strong><a href = "mailto:codered.nitrkl@gmail.com">codered.nitrkl@gmail.com</a></p>
+                <p><strong className = "cinfo">Email: </strong><a style={{color: "#FA6432", textDecorationLine: "none", fontSize: "0.9rem"}} href = "mailto:codered.nitrkl@gmail.com">codered.nitrkl@gmail.com</a></p>
               </div>
             </div>
           </Col>
