@@ -9,7 +9,7 @@ import 'holderjs'
 
 const Home = () => {
   const aboutRef = useRef(null)
-  const scrollToAbout = () => window.scrollTo(0, aboutRef.current.offsetTop)
+  const scrollToAbout = () => window.scrollTo(0, aboutRef.current.offsetTop-50)
   return(
     <div className = "bottomPadding contain center">
       <Fly />
