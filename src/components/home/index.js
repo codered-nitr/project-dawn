@@ -1,7 +1,7 @@
 import React, { useRef } from 'react'
 import '../../css/home.css'
 import { IconContext } from 'react-icons'
-import { Carousel, Row, Image, Button } from 'react-bootstrap'
+import { Carousel, Row, Image, Button, Col } from 'react-bootstrap'
 import { AiFillCaretDown } from 'react-icons/ai'
 import About from './about'
 import Fly from './fly'
@@ -18,9 +18,13 @@ const Home = () => {
         <Carousel>
           <Carousel.Item>
             <Row><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></Row>
-            <Row>
-              <BrowserView><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></BrowserView>
-              <MobileView><Image src = {require('../../img/code-red.png')} /></MobileView>
+            <Row className = "justify-content-md-center">
+              <Col></Col>
+              <Col>
+                <BrowserView><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></BrowserView>
+                <MobileView><div style = {{marginLeft: "auto", marginRight: "auto"}}><Image style = {{width: "400px", height: "200px", textAlign:"center"}} src = {require('../../img/code-red.png')} /></div></MobileView>
+              </Col>
+              <Col></Col>
             </Row>
             <Row><Image src = {require('../../img/knowUs.png')} /></Row>
             <Carousel.Caption>
