@@ -25,7 +25,7 @@ function App() {
             <Route exact path = "/" component = {Home} />
             <Route path = "/enigma" component = {Enigma} />
             <Route path = "/ide" component = {IDE} />
-            <Route path = "/apply" component = {Maintenance} />
+            <Route path = "/apply" component = {Apply} />
             <Route path = "/login" component = {Maintenance} />
             <Route path = "/signup" component = {Maintenance} />
           </Switch>
