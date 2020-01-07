@@ -72,3 +72,7 @@ img:focus{
   max-height: 510px;
   overflow: hidden;
 }
+
+.card{
+  margin: auto;
+}

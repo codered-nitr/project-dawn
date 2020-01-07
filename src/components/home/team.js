@@ -85,7 +85,7 @@ const team = [
 const Team = () => {
   return(
     <div>
-      <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto"}}><Image src = {require('../../img/meet.png')} /></div>
+      <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", maxWidth: "1000px"}}><Image src = {require('../../img/meet.png')} /></div>
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", width: "max-content"}}>{team[0]}</div>
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto"}}>
         <span style = {{display: "inline-block"}}>{team[1]}</span>

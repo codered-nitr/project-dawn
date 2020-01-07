@@ -11,13 +11,14 @@ import Footer from './components/footer'
 import Maintenance from './components/maintenance'
 import { Helmet } from 'react-helmet'
 import Enigma from './components/enigma'
+import { isBrowser } from 'react-device-detect'
 
 function App() {
   return (
     <div className = "area">
       <Helmet><title>Code Red NIT-R</title></Helmet>
       <Router>
-        <div className="appBody">
+        <div className={isBrowser?"appBody":""}>
           <NavBar />
           <hr />
           <Switch>
