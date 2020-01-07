@@ -17,11 +17,11 @@ const Home = () => {
       <div className = "bottomPadding">
         <Carousel>
           <Carousel.Item>
+            <Row><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></Row>
             <Row>
               <BrowserView><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></BrowserView>
-              <MobileView><h1 style = {{color: "green"}}>Works</h1></MobileView>
+              <MobileView><Image src = {require('../../img/code-red.png')} /></MobileView>
             </Row>
-            <Row><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></Row>
             <Row><Image src = {require('../../img/knowUs.png')} /></Row>
             <Carousel.Caption>
               <div className = "bounce" onClick = {scrollToAbout}>
