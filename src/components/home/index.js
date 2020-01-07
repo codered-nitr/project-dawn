@@ -7,6 +7,7 @@ import About from './about'
 import Fly from './fly'
 import 'holderjs'
 import { BrowserView, MobileView } from 'react-device-detect'
+import Team from './team'
 
 const Home = () => {
   const aboutRef = useRef(null)
@@ -43,9 +44,10 @@ const Home = () => {
           <Carousel.Item><img src = {require('../../img/CodeRed Inductions.png')} /></Carousel.Item>
         </Carousel>
       </div>
-      <div ref = {aboutRef} className = "">
+      <div ref = {aboutRef} className = "bottomPadding">
         <About />
       </div>
+      <Team />
     </div>
   )
 }
