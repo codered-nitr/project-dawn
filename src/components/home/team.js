@@ -2,13 +2,13 @@ import React from 'react'
 import 'holderjs'
 import { Image, Row } from 'react-bootstrap'
 import '../../css/team.css'
-import { BrowserView } from 'react-device-detect'
 import { IconContext } from 'react-icons'
 import { TiSocialFacebookCircular, TiSocialGithubCircular, TiSocialLinkedinCircular } from 'react-icons/ti'
+import { IoIosContact } from 'react-icons/io'
 
 const team = [
   <div className = "black-back bottomPadding" style = {{width: "19.5rem", textAlign: "center", paddingTop: "18px", borderRadius: "10px"}}>
-    <Image src = {require('../../img/av.png')} width = {200} roundedCircle />
+    <Image src = {require('../../img/nishith.png')} width = {200} roundedCircle />
     <span style = {{display: "inline-block", width: "100%", height: "2px", backgroundColor: "", marginBottom: ""}} />
     <span style = {{color: "whitesmoke"}}>Nishith G. Behera</span>
     <span style = {{display: "inline-block", width: "100%", height: "2px", backgroundColor: "whitesmoke", marginBottom: ""}} />
@@ -79,6 +79,19 @@ const team = [
         <a href = 'https://www.github.com/Mohit-Swain'><TiSocialGithubCircular /></a>
       </IconContext.Provider>
     </div>
+  </div>,
+  <div className = "black-back bottomPadding rightPadding" style = {{width: "19.5rem", textAlign: "center", paddingTop: "18px", borderRadius: "10px"}}>
+    <Image src = {require('../../img/facad.png')} width = {200} roundedCircle />
+    <span style = {{display: "inline-block", width: "100%", height: "2px", backgroundColor: "", marginBottom: ""}} />
+    <span style = {{color: "whitesmoke"}}>Prof. Pabitra Mohan Khilar</span>
+    <span style = {{display: "inline-block", width: "100%", height: "2px", backgroundColor: "whitesmoke", marginBottom: ""}} />
+    <span style = {{color: "#FA3264"}}>Faculty Advisor (CS Dept.)</span>
+    <span style = {{display: "inline-block", width: "100%", height: "2px", backgroundColor: "whitesmoke", marginBottom: "10px"}} />
+    <div style = {{paddingBottom: "10px"}}>
+      <IconContext.Provider value = {{color: "#FA3264", size: "2em"}}>
+        <a href = 'https://www.nitrkl.ac.in/FProfile.aspx?pmkhilar'><IoIosContact /></a>
+      </IconContext.Provider>
+    </div>
   </div>
 ]
 
@@ -93,6 +106,7 @@ const Team = () => {
         <span style = {{display: "inline-block"}}>{team[3]}</span>
         <span style = {{display: "inline-block"}}>{team[4]}</span>
       </div>
+      <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", width: "max-content"}}>{team[5]}</div>
     </div>
   )
 }

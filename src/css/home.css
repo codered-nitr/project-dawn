@@ -54,6 +54,7 @@ img:focus{
   animation-duration: 2s;
   animation-name: bounce-anim;
   animation-iteration-count: infinite;
+  cursor: pointer;
 }
 
 .topPadding{
