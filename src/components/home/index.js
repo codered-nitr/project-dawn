@@ -6,6 +6,7 @@ import { AiFillCaretDown } from 'react-icons/ai'
 import About from './about'
 import Fly from './fly'
 import 'holderjs'
+import { BrowserView, MobileView } from 'react-device-detect'
 
 const Home = () => {
   const aboutRef = useRef(null)
@@ -16,7 +17,10 @@ const Home = () => {
       <div className = "bottomPadding">
         <Carousel>
           <Carousel.Item>
-            <Row><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></Row>
+            <Row>
+              <BrowserView><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></BrowserView>
+              <MobileView><h1 style = {{color: "green"}}>Works</h1></MobileView>
+            </Row>
             <Row><Image src = "holder.js/800x200?text= &bg=rgba(0,0,0,0.0)&fg=#ffffff" /></Row>
             <Row><Image src = {require('../../img/knowUs.png')} /></Row>
             <Carousel.Caption>
