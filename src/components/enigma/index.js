@@ -7,7 +7,7 @@ const Enigma = () => {
     <div>
       <Container>
         <Image style = {{marginTop: "-10px"}} src = {require('../../img/enigma.png')} />
-        <div className = "bottomPadding">
+        <div className = "bottomPadding" data-aos = "fade-up">
           <Jumbotron className = "black-back">
             <h1 className = "spl">Aim</h1>
             <p>Even if NIT Rourkela is considered one of the premier engineering institutions in India, its scholars fail to prove their mettle
@@ -20,7 +20,7 @@ const Enigma = () => {
           </Jumbotron>
           <iframe name="ifrm" id="ifrm" style={{paddingLeft: "5.75%", paddingRight: "5.75%", width: "100%", height: "400px", objectFit: "contain", overflow: "hidden", position: "relative", border: "2px solid #FA3264", borderRadius: "10px"}} src={require('../../img/univ.png')} scrolling="yes" allowTransparency="true" frameBorder = {0} ></iframe>
         </div>
-        <div className = "bottomPadding">
+        <div className = "bottomPadding" data-aos = "flip-up">
           <Jumbotron className = "black-back">
             <h1 className = "spl">Why NIT Rourkela is not in Top 50?</h1>
           </Jumbotron>
@@ -30,10 +30,10 @@ const Enigma = () => {
           <Jumbotron className = "black-back">
             <h1 className = "spl">Topics to be covered</h1>
           </Jumbotron>
-          <Row>
-            <Col><Image src = {require('../../img/topics.png')}/></Col>
+          <Row className = "wd95">
+            <Col><Image data-aos = "fade-down-right" src = {require('../../img/topics.png')}/></Col>
             <Col>
-              <Jumbotron className = "black-back jfy">
+              <Jumbotron className = "black-back jfy" data-aos = "fade-down-left">
                 <ul>
                   <li>Time and Space complexity</li>
                   <li>Searching and Sorting</li>

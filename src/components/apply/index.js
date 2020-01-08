@@ -26,7 +26,7 @@ const Apply = () => {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridRollNo">
             <Form.Label>NITR Roll Number</Form.Label>
-            <Form.Control required pattern="[0-9]{3}-/[A-Z]/i{2}-[0-9]{4}" type="text" placeholder="Enter roll number" />
+            <Form.Control required pattern="[0-9]{3}-/[A-Z]/i{2}-[0-9]{4}" type="text" placeholder="Ex. 118EEXXXX" />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridPhoneNo">
             <Form.Label> Contact Number</Form.Label>
@@ -43,19 +43,16 @@ const Apply = () => {
           <Form.Check 
             type="switch"
             id="custom-switch"
-            label="Do you have any prior Competetive Programming experience?"
+            label="Do you have any prior Competitive Programming experience?"
             className = "check-box"
           />
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridWhyJoin">
             <Form.Label>Why do you want to join the club?</Form.Label>
-            <Form.Control as="textarea" rows="4" placeholder="Answer..." />
+            <Form.Control as="textarea" rows="4" placeholder="I want to join Code Red because..." />
           </Form.Group>
         </Form.Row>
-        <Form.Group controlId="formBasicCheckbox">
-          <Form.Check custom type="checkbox" label="I accept the terms and conditions." className = "check-box"/>
-        </Form.Group>
         <Button type="submit" id="submit">Submit</Button>
       </Form>
     </div>

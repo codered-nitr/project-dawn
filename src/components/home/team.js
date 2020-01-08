@@ -99,14 +99,14 @@ const Team = () => {
   return(
     <div>
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", maxWidth: "1000px"}}><Image src = {require('../../img/meet.png')} /></div>
-      <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", width: "max-content"}}>{team[0]}</div>
+      <div data-aos = "zoom-in-down" className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", width: "max-content"}}>{team[0]}</div>
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto"}}>
-        <span style = {{display: "inline-block"}}>{team[1]}</span>
-        <span style = {{display: "inline-block"}}>{team[2]}</span>
-        <span style = {{display: "inline-block"}}>{team[3]}</span>
-        <span style = {{display: "inline-block"}}>{team[4]}</span>
+        <span data-aos = "fade-right" style = {{display: "inline-block"}}>{team[1]}</span>
+        <span data-aos = "fade-up" style = {{display: "inline-block"}}>{team[2]}</span>
+        <span data-aos = "fade-down" style = {{display: "inline-block"}}>{team[3]}</span>
+        <span data-aos = "fade-left" style = {{display: "inline-block"}}>{team[4]}</span>
       </div>
-      <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", width: "max-content"}}>{team[5]}</div>
+      <div data-aos = "zoom-in-up" className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", width: "max-content"}}>{team[5]}</div>
     </div>
   )
 }

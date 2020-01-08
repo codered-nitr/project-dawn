@@ -12,8 +12,11 @@ import Maintenance from './components/maintenance'
 import { Helmet } from 'react-helmet'
 import Enigma from './components/enigma'
 import { isBrowser } from 'react-device-detect'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function App() {
+  AOS.init({duration: 1000})
   return (
     <div className = "area">
       <Helmet><title>Code Red NIT-R</title></Helmet>
