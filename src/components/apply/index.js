@@ -1,7 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form, Col, Row, Button, Image, Container, Jumbotron, Card } from 'react-bootstrap'
-
+import {isMobile} from 'react-device-detect'
 import '../../css/apply.css'
 
 const Apply = () => {
@@ -14,8 +14,8 @@ const Apply = () => {
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", maxWidth: "1000px"}}><Image src = {require('../../img/member.png')} /></div>
       <Container data-aos = "fade-up">
         <div style = {{borderRadius: "5px", width: "80%", height: "max-content", marginLeft: "auto", marginRight: "0", marginBottom: "10px", backgroundColor: "whitesmoke", display: "flex"}}>
-          <div style = {{display: "inline-block", width: "50%", width: "max-content"}}><Image style = {{maxHeight: "20rem"}} src = {require('../../img/hello there.png')}/></div>
-          <div style = {{display: "inline-block", width: "50%", fontSize: "15px", marginTop: "auto", marginBottom: "auto"}}>
+          <div style = {{display: isMobile?"block":"inline-block", width: "50%", width: "max-content"}}><Image style = {{maxHeight: "20rem"}} src = {require('../../img/hello there.png')}/></div>
+          <div style = {{display: isMobile?"block":"inline-block", width: "50%", fontSize: "15px", marginTop: "auto", marginBottom: "auto"}}>
             <h4>Interested in joining the club?</h4>
             <p>Being a club focussed on the sport of Competitive Programming, we are looking for passionate people.</p>
             <p>Have a look around to see if you fit in!</p>
@@ -79,7 +79,7 @@ const Apply = () => {
             <Form.Check 
               type="switch"
               id="custom-switch"
-              label="Do you have any prior Competitive Programming experience?"
+              label="I have prior Competitive Programming experience."
               className = "check-box"
             />
           </Form.Row>
