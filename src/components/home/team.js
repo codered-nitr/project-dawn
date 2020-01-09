@@ -97,7 +97,7 @@ const team = [
 
 const Team = () => {
   return(
-    <div>
+    <div style = {{overflow: "hidden", width: "95%", marginLeft: "auto", marginRight: "auto"}}>
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", maxWidth: "1000px"}}><Image src = {require('../../img/meet.png')} /></div>
       <div data-aos = "zoom-in-down" className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", width: "max-content"}}>{team[0]}</div>
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto"}}>

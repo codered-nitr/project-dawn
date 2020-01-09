@@ -2,12 +2,13 @@
   width: 55%;
   padding: 10px 10px;
   border-right: 2px solid lightslategrey;
+  border-left: 2px solid lightslategrey;
   box-sizing: border-box;
   background-color: black;
 }
 
 .form-label{
-  color: #f8114b !important;
+  color: #FA3264 !important;
   font-weight: bold;
   line-height: 1.25;
 }
@@ -19,10 +20,19 @@
   max-width: 100px;
 }
 
+#submit:hover{
+  background-color: #FA3264;
+  transition: all .2s ease-in-out;
+}
+
 Form .check-box{
   margin-left: 10px;
   color: rgb(44, 139, 202);
   font-style: monospace;
   font-weight: 500;
   line-height: 1.25;
+}
+
+.form-group{
+  min-width: 100px;
 }
