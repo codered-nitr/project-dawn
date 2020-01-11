@@ -15,6 +15,7 @@
     "classnames": "^2.2.6",
     "compass-mixins": "^0.12.10",
     "express": "^4.17.1",
+    "firebase": "^7.6.2",
     "gh-pages": "^2.1.1",
     "holderjs": "^2.9.6",
     "jquery": "^3.4.1",

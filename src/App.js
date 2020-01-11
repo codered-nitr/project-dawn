@@ -29,8 +29,6 @@ function App() {
             <Route path = "/enigma" component = {Enigma} />
             <Route path = "/ide" component = {IDE} />
             <Route path = "/apply" component = {Apply} />
-            <Route path = "/login" component = {Maintenance} />
-            <Route path = "/signup" component = {Maintenance} />
           </Switch>
           <Footer />
         </div>

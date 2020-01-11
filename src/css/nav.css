@@ -50,3 +50,61 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
+.logButton:hover{
+  color: aquamarine;
+  transition: all .2s ease-in-out;
+}
+
+.logButton{
+  color: #FA3264;
+  transition: all .2s ease-in-out;
+}
+
+.LSU{
+  border: none;
+  background-color: inherit;
+  color: #FA3264;
+  transition: background-color .3s linear;
+}
+
+.LSUgroup{
+  border-bottom: 1px solid #FF3264;
+  border-radius: 5px;
+  margin-bottom: 10px !important;
+}
+
+.LSU:focus{
+  background-color: whitesmoke;
+  transition: all .3s linear;
+}
+
+.LSU::placeholder{
+  color: whitesmoke;
+  font-size: 0.9rem;
+}
+
+.lsuModal{
+  overflow: hidden;
+}
+
+.modal-content{
+  border: none !important;
+  box-shadow: 0 0 10px #FA3264;
+}
+
+.modal-backdrop.show{
+  background: whitesmoke;
+}
+
+.modal{
+  border-radius: 5px;
+}
+
+#LSUsubmit{
+  background-color: #FA3264;
+}
+
+#LSUsubmit:disabled{
+  background-color: inherit;
+}
