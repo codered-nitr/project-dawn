@@ -74,7 +74,7 @@ const LSU = props => {
   return(
     <Modal {...props} aria-labelledby = "contained-modal-title-vcenter" className = "lsuModal" centered>
       <Modal.Header style = {{backgroundColor: "#050505", color: "#FA3264"}}>
-        <h4 style = {{fontFamily: "Courier"}}>Welcome to Code Red</h4>
+        <h4 style = {{fontFamily: "madeEvolve"}}>Welcome to <span style = {{color: "whitesmoke"}}>CODE</span> RED</h4>
       </Modal.Header>
       <Modal.Body style = {{backgroundColor: "#050505", color: "whitesmoke"}}>
       <IconContext.Provider value = {{color: "whitesmoke", size: "2em"}}>
