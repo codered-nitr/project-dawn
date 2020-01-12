@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { Form, Col, Row, Button, Image, Container, Jumbotron, Card } from 'react-bootstrap'
+import { isMobile } from 'react-device-detect'
 
 import '../../css/apply.css'
 
@@ -10,6 +11,36 @@ const Apply = () => {
     event.preventDefault()
   }
   return(
+    (isMobile)?
+    <div>
+      <Card style = {{width: "18rem", marginBottom: "10px", textAlign: "center"}}>
+        <Card.Img variant = "top" src = {require('../../img/hello there.png')} />
+        <Card.Title>Interested in joining the club?</Card.Title>
+        <Card.Body>Being a club focussed on the sport of Competitive Programming, we are looking for passionate people. 
+          Have a look around to see if you fit in!
+        </Card.Body>
+      </Card>
+      <Card style = {{width: "18rem", marginBottom: "10px", textAlign: "center"}}>
+        <Card.Img variant = "top" src = {require('../../img/plan.png')} />
+        <Card.Title>Programming and Deduction skills</Card.Title>
+        <Card.Body>Competitive Programming is the perfect blend of using various data structures and algorithms with peculiar paradigms to solve problems.
+            Hence, we are looking for members with strong understanding of the above.
+        </Card.Body>
+      </Card>
+      <Card style = {{width: "18rem", marginBottom: "10px", textAlign: "center"}}>
+        <Card.Img variant = "top" src = {require('../../img/implementation.png')} />
+        <Card.Title>Feeling unsure?</Card.Title>
+        <Card.Body>Attend Enigma, a month long workshop series, where we provide training on various data structures and algorithms to get a kickstart.</Card.Body>
+      </Card>
+      <Card style = {{width: "18rem", marginBottom: "10px", textAlign: "center"}}>
+        <Card.Img variant = "top" src = {require('../../img/ready.png')} />
+        <Card.Title>Ready to join?</Card.Title>
+        <Card.Body>We would be glad to have you!
+            Fill up the form below and wait for the next induction test. You will receive a mail about the test details later.
+        </Card.Body>
+      </Card>
+    </div>
+    :  
     <div>
       <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", maxWidth: "1000px"}}><Image src = {require('../../img/member.png')} /></div>
       <Container data-aos = "fade-up">
