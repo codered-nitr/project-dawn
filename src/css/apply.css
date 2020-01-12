@@ -1,8 +1,7 @@
 .w50{
   width: 55%;
   padding: 10px 10px;
-  border-right: 2px solid lightslategrey;
-  border-left: 2px solid lightslategrey;
+  border: 2px solid lightslategrey;
   box-sizing: border-box;
   background-color: black;
 }
@@ -17,7 +16,7 @@
   display: block;
   margin: auto;
   width: 50%;
-  max-width: 100px;
+  min-width: 100px;
 }
 
 #submit:hover{
@@ -35,4 +34,10 @@ Form .check-box{
 
 .form-group{
   min-width: 100px;
+}
+
+@media screen and (max-width: 500px){
+  .w50{
+    width: 100%;
+  }
 }
