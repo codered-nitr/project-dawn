@@ -77,6 +77,7 @@ const Apply = () => {
           </div>
         </div>
       </Container>
+      
       <div className="w50" style = {{margin: "auto"}}>
         <h2 style = {{textAlign: "center", color: "#FA3264"}}>Apply for Code Red Inductions!</h2>
         <Form onSubmit={onSubmit}>
