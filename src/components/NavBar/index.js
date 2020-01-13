@@ -4,10 +4,13 @@ import Nav from 'react-bootstrap/Nav'
 import { Modal, InputGroup, FormControl, Button, Form } from 'react-bootstrap'
 import '../../css/nav.css'
 import { IoMdLogIn, IoMdKey } from 'react-icons/io'
+import { MdSettingsPower } from 'react-icons/md'
 import { IconContext } from 'react-icons'
 import { TiUserOutline } from 'react-icons/ti'
 import { MdEmail } from 'react-icons/md'
 import { FaSlackHash } from 'react-icons/fa'
+import { withFirebase } from '../firebase'
+import { AuthUserContext } from '../session'
 
 class NavBar extends Component {
   constructor(props) {
@@ -28,47 +31,70 @@ class NavBar extends Component {
   }
   render() {
     return(
-      <Navbar className={this.state.scrolled?"color-nav":""} collapseOnSelect expand="md" variant="dark" sticky="top" ref={elem => this.elem = elem}>
-        <Navbar.Brand className="nav-brand" href="/">CODE <span className = "red">RED</span></Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mr-auto">
-            <Nav.Link href="/enigma">Enigma-NITR</Nav.Link>
-            <Nav.Link href="/ide">IDE</Nav.Link>
-            <Nav.Link href="/apply">Join</Nav.Link>
-          </Nav>
-          <Nav>
-            <span className = "logButton" title = "Login/SignUp" style = {{marginLeft: "auto", marginRight: "auto"}}>
-              <IconContext.Provider value = {{color: "inherit", size: "2em"}}>
-                <IoMdLogIn style = {{cursor: "pointer"}} onClick = {() => this.setState({showLSU: true})} />
-                <LSU show = {this.state.showLSU} onHide = {() => this.setState({showLSU: false})} />
+      <AuthUserContext.Consumer>
+      {authUser => 
+        <Navbar className={this.state.scrolled?"color-nav":""} collapseOnSelect expand="md" variant="dark" sticky="top" ref={elem => this.elem = elem}>
+          <Navbar.Brand className="nav-brand" href="/">CODE <span className = "red">RED</span></Navbar.Brand>
+          <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+          <Navbar.Collapse id="responsive-navbar-nav">
+            <Nav className="mr-auto">
+              <Nav.Link href="/enigma">Enigma-NITR</Nav.Link>
+              <Nav.Link href="/ide">IDE</Nav.Link>
+              <Nav.Link href="/apply">Join</Nav.Link>
+            </Nav>
+            <Nav>
+              <IconContext.Provider value = {{color: "inherit", size: "2em"}}>  
+              {authUser?
+                <span className = "logout" title = "Logout" style = {{marginLeft: "auto", marginRight: "auto"}}>
+                  <MdSettingsPower style = {{cursor: "pointer"}} onClick = {this.props.firebase.doSignOut} />
+                </span>
+              :
+                <span className = "logButton" title = "Login/SignUp" style = {{marginLeft: "auto", marginRight: "auto"}}>
+                  <IoMdLogIn style = {{cursor: "pointer"}} onClick = {() => this.setState({showLSU: true})} />
+                  <LSU show = {this.state.showLSU} onHide = {() => this.setState({showLSU: false})} onLogin = {() => this.setState({showLSU: false})} />
+                </span>
+              }
               </IconContext.Provider>
-            </span>
-          </Nav>
-        </Navbar.Collapse>
-      </Navbar>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      }</AuthUserContext.Consumer>
     )
   }
 }
 
-const LSU = props => {
+const LSUBase = props => {
   const [sign, setSign] = useState(false)
 
   const [lEmail, setLEmail] = useState("")
   const [lPass, setLPass] = useState("")
   const onLogin = event => {
-    //console.log(lEmail, lPass)
+    props.firebase
+      .doSignInWithEmailAndPassword(lEmail, lPass)
+      .then(() => props.onLogin())
+      .catch(error => {
+        setLErr(error.message)
+        setTimeout(() => setLErr(""), 5000)
+      })
     event.preventDefault()
   }
+  const [lErr, setLErr] = useState("")
   
   const [sName, setSName] = useState("")
   const [sEmail, setSEmail] = useState("")
   const [sRoll, setSRoll] = useState("")
   const [sPass, setSPass] = useState("")
   const onCreate = event => {
-    //console.log(sName, sEmail, sRoll, sPass)
+    props.firebase
+      .doCreateUserWithEmailAndPassword(sEmail, sPass)
+      .then(authUser => console.log("Signed up"))
+      .catch(error => {
+        setSErr(error.message)
+        setTimeout(() => setSErr(""), 5000)
+      })
     event.preventDefault()
   }
+  const [sErr, setSErr] = useState("")
   return(
     <Modal {...props} aria-labelledby = "contained-modal-title-vcenter" className = "lsuModal" centered>
       <Modal.Header style = {{backgroundColor: "#050505", color: "#FA3264"}}>
@@ -90,7 +116,10 @@ const LSU = props => {
             </InputGroup>
             <div style = {{textAlign: "center"}}><Button type = "submit" variant = "dark" id = "LSUsubmit">Login</Button></div>
           </Form>
-          <p style = {{textAlign: "center"}}>Don't have an account? <span style = {{color: "#FA6432", cursor: "pointer"}} onClick = {() => setSign(true)}>Sign Up</span></p>
+          <p style = {{textAlign: "center"}}>
+            {lErr}<br/>
+            Don't have an account? <span style = {{color: "#FA6432", cursor: "pointer"}} onClick = {() => setSign(true)}>Sign Up</span>
+          </p>
         </div>
       :
         <div style = {{width: "80%", margin: "auto"}}>
@@ -114,7 +143,10 @@ const LSU = props => {
             </InputGroup>
             <div style = {{textAlign: "center"}}><Button type = "submit" variant = "dark" id = "LSUsubmit">Create</Button></div>
           </Form>
-          <p style = {{textAlign: "center"}}>Already have an account? <span style = {{color: "#FA6432", cursor: "pointer"}} onClick = {() => setSign(false)}>Login</span></p>
+          <p style = {{textAlign: "center"}}>
+            {sErr}<br/>
+            Already have an account? <span style = {{color: "#FA6432", cursor: "pointer"}} onClick = {() => setSign(false)}>Login</span>
+          </p>
         </div>
       }
       </IconContext.Provider>
@@ -123,6 +155,8 @@ const LSU = props => {
   )
 }
 
-export default NavBar
+const LSU = withFirebase(LSUBase)
+
+export default withFirebase(NavBar)
 
 export { LSU }

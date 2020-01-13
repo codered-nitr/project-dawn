@@ -14,8 +14,9 @@ import Enigma from './components/enigma'
 import { isBrowser } from 'react-device-detect'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+import { withAuthentication } from './components/session'
 
-function App() {
+const App = () => {
   AOS.init({duration: 1000})
   return (
     <div className = "area">
@@ -34,7 +35,7 @@ function App() {
         </div>
       </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default withAuthentication(App);

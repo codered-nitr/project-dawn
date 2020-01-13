@@ -61,6 +61,15 @@
   transition: all .2s ease-in-out;
 }
 
+.logout{
+  color: #FA3264;
+  transition: all .3s ease-in-out;
+}
+
+.logout:hover{
+  transform: rotate(90deg);
+}
+
 .LSU{
   border: none;
   background-color: inherit;
