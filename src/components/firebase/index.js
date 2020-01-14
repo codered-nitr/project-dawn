@@ -1,5 +1,6 @@
 import app from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/database'
 import React from 'react'
 
 const firebaseConfig = {
@@ -17,11 +18,16 @@ class Firebase{
   constructor() {
     app.initializeApp(firebaseConfig)
     this.auth = app.auth()
+    this.db = app.database()
   }
-
+  //Authorization
   doCreateUserWithEmailAndPassword = (email, password) => this.auth.createUserWithEmailAndPassword(email, password)
   doSignInWithEmailAndPassword = (email, password) => this.auth.signInWithEmailAndPassword(email, password)
   doSignOut = () => this.auth.signOut()
+
+  //User API
+  users = () => this.db.ref('users')
+  user = uid => this.db.ref(`users/${uid}`)
 }
 
 const FirebaseContext = React.createContext(null)

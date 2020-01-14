@@ -15,7 +15,7 @@ import { AuthUserContext } from '../session'
 class NavBar extends Component {
   constructor(props) {
     super(props);
-    this.state = {scrolled: false, showLSU: false}
+    this.state = {scrolled: false, showLSU: false, displayName: ""}
   }
   componentDidMount() {
     window.addEventListener("scroll", this.handleScroll);
@@ -29,25 +29,35 @@ class NavBar extends Component {
     else
       this.setState({scrolled: false})
   }
+  setDisplayName = uid => {
+    this.props.firebase.user(uid).once('value')
+      .then(snapshot => this.setState({displayName: snapshot.val().displayName.split(' ')[0]}))
+  }
   render() {
     return(
       <AuthUserContext.Consumer>
-      {authUser => 
+      {authUser => {
+        authUser && this.state.displayName === ""?this.setDisplayName(authUser.uid):console.log()
+        return(
         <Navbar className={this.state.scrolled?"color-nav":""} collapseOnSelect expand="md" variant="dark" sticky="top" ref={elem => this.elem = elem}>
           <Navbar.Brand className="nav-brand" href="/">CODE <span className = "red">RED</span></Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="mr-auto">
-              <Nav.Link href="/enigma">Enigma-NITR</Nav.Link>
-              <Nav.Link href="/ide">IDE</Nav.Link>
-              <Nav.Link href="/apply">Join</Nav.Link>
+              <Nav.Link className="nav-l" href="/enigma">Enigma-NITR</Nav.Link>
+              <Nav.Link className="nav-l" href="/ide">IDE</Nav.Link>
+              <Nav.Link className="nav-l" href="/apply">Join</Nav.Link>
             </Nav>
             <Nav>
               <IconContext.Provider value = {{color: "inherit", size: "2em"}}>  
               {authUser?
-                <span className = "logout" title = "Logout" style = {{marginLeft: "auto", marginRight: "auto"}}>
-                  <MdSettingsPower style = {{cursor: "pointer"}} onClick = {this.props.firebase.doSignOut} />
-                </span>
+                <>
+                  <Nav.Link style={{color: "whitesmoke", textAlign: "center", fontFamily: "Verdana, Geneva, Tahoma, sans-serif", font: "outline"}} href="/account">
+                    Hello, {this.state.displayName}!
+                  </Nav.Link>
+                  <span className = "logout" title = "Logout" style = {{marginLeft: "auto", marginRight: "auto"}}>
+                    <MdSettingsPower style = {{cursor: "pointer"}} onClick = {this.props.firebase.doSignOut} />
+                  </span></>
               :
                 <span className = "logButton" title = "Login/SignUp" style = {{marginLeft: "auto", marginRight: "auto"}}>
                   <IoMdLogIn style = {{cursor: "pointer"}} onClick = {() => this.setState({showLSU: true})} />
@@ -57,7 +67,7 @@ class NavBar extends Component {
               </IconContext.Provider>
             </Nav>
           </Navbar.Collapse>
-        </Navbar>
+        </Navbar>)}
       }</AuthUserContext.Consumer>
     )
   }
@@ -87,7 +97,13 @@ const LSUBase = props => {
   const onCreate = event => {
     props.firebase
       .doCreateUserWithEmailAndPassword(sEmail, sPass)
-      .then(authUser => console.log("Signed up"))
+      .then(authUser => {
+        props.firebase.user(authUser.user.uid)
+          .set({
+            displayName: sName,
+            nitrRoll: sRoll
+          })
+      })
       .catch(error => {
         setSErr(error.message)
         setTimeout(() => setSErr(""), 5000)

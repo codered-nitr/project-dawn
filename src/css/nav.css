@@ -2,7 +2,7 @@
   background-color: black;
 }
 
-.nav-link{
+.nav-l{
   color: #FA3264 !important;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -11,7 +11,7 @@
   transition: all 0.2s ease-in-out;
 }
 
-.nav-link:hover{
+.nav-l:hover{
   color: whitesmoke !important;
   transform: scale(1.25);
   transition: all .2s ease-in-out;
