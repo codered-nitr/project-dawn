@@ -23,7 +23,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true
+      loading: false  //set true as initial
     }
   }
   render(){
@@ -31,24 +31,20 @@ class App extends Component {
     return (
       <div className = "area">      
         <Helmet><title>Code Red NIT-R</title></Helmet>
-        <OnImagesLoaded onLoaded = {() => this.setState({loading: false})}>
-          {this.state.loading?<>{Loader}</>:
-            <Router>
-              <div className={isBrowser?"appBody":""}>
-                <NavBar />
-                <hr />
-                <Switch>
-                  <Route exact path = "/" component = {Home} />
-                  <Route path = "/enigma" component = {Enigma} />
-                  <Route path = "/ide" component = {IDE} />
-                  <Route path = "/apply" component = {Apply} />
-                  <Route path = "/account" component = {Account} />
-                </Switch>
-                <Footer />
-              </div>
-            </Router>
-          }
-        </OnImagesLoaded>
+        <Router>
+          <div className={isBrowser?"appBody":""}>
+            <NavBar />
+            <hr />
+            <Switch>
+              <Route exact path = "/" component = {Home} />
+              <Route path = "/enigma" component = {Enigma} />
+              <Route path = "/ide" component = {IDE} />
+              <Route path = "/apply" component = {Apply} />
+              <Route path = "/account" component = {Account} />
+            </Switch>
+            <Footer />
+          </div>
+        </Router>
       </div>
     )
   }
