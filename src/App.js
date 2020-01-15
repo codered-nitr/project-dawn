@@ -15,6 +15,7 @@ import { isBrowser } from 'react-device-detect'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { withAuthentication } from './components/session'
+import Account from './components/account'
 
 const App = () => {
   AOS.init({duration: 1000})
@@ -30,7 +31,7 @@ const App = () => {
             <Route path = "/enigma" component = {Enigma} />
             <Route path = "/ide" component = {IDE} />
             <Route path = "/apply" component = {Apply} />
-            <Route path = "/account" component = {Maintenance} />
+            <Route path = "/account" component = {Account} />
           </Switch>
           <Footer />
         </div>

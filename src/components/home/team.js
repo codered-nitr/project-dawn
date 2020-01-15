@@ -1,6 +1,5 @@
 import React from 'react'
-import 'holderjs'
-import { Image, Row } from 'react-bootstrap'
+import { Image } from 'react-bootstrap'
 import '../../css/team.css'
 import { IconContext } from 'react-icons'
 import { TiSocialFacebookCircular, TiSocialGithubCircular, TiSocialLinkedinCircular } from 'react-icons/ti'

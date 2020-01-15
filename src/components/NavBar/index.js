@@ -101,7 +101,7 @@ const LSUBase = props => {
         props.firebase.user(authUser.user.uid)
           .set({
             displayName: sName,
-            nitrRoll: sRoll
+            nitrRoll: sRoll.toUpperCase()
           })
       })
       .catch(error => {
