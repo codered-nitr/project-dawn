@@ -1,15 +1,11 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import { Form, Col, Row, Button, Image, Container, Jumbotron, Card } from 'react-bootstrap'
+import { Button, Image, Container, Card } from 'react-bootstrap'
 import { isMobile } from 'react-device-detect'
 
 import '../../css/apply.css'
 
 const Apply = () => {
-  const onSubmit = event => {
-    //console.log(event.currentTarget.elements["formGridFName"].value)
-    event.preventDefault()
-  }
   return(
     <div>
       {(isMobile)?
@@ -79,53 +75,7 @@ const Apply = () => {
             </div>
           </Container>
         </div>}
-      <div className="w50" style = {{margin: "auto"}}>
-        <h2 style = {{textAlign: "center", color: "#FA3264"}}>Apply for Code Red Inductions!</h2>
-        <Form onSubmit={onSubmit}>
-          <Form.Row>
-            <Form.Group as={Col} controlId="formGridFName">
-              <Form.Label>First Name</Form.Label>
-              <Form.Control required type="text" placeholder="Enter first name" />
-            </Form.Group>
-            <Form.Group as={Col} controlId="formGridLName">
-              <Form.Label>Last Name</Form.Label>
-              <Form.Control type="text" placeholder="Enter last name" />
-            </Form.Group>
-          </Form.Row>
-          <Form.Row>
-            <Form.Group as={Col} controlId="formGridRollNo">
-              <Form.Label>NITR Roll Number</Form.Label>
-              <Form.Control required pattern="[0-9]{3}[A-Z]{2}[0-9]{4}" type="text" placeholder="Ex. 118EEXXXX" />
-            </Form.Group>
-            <Form.Group as={Col} controlId="formGridPhoneNo">
-              <Form.Label> Contact Number</Form.Label>
-              <Form.Control required type="tel" placeholder="Enter phone number" />
-            </Form.Group>
-          </Form.Row>
-          <Form.Row>
-            <Form.Group as={Col} controlId="formGridEmail">
-              <Form.Label>Email</Form.Label>
-              <Form.Control required type="email" placeholder="name@example.com" />
-            </Form.Group>
-          </Form.Row>
-          <Form.Row>
-            <Form.Check 
-              type="switch"
-              id="custom-switch"
-              required
-              label="I have prior Competitive Programming experience."
-              className = "check-box"
-            />
-          </Form.Row>
-          <Form.Row>
-            <Form.Group as={Col} controlId="formGridWhyJoin">
-              <Form.Label>Why do you want to join the club?</Form.Label>
-              <Form.Control as="textarea" rows="4" placeholder="I want to join Code Red because..." />
-            </Form.Group>
-          </Form.Row>
-          <Button type="submit" variant = "dark" id="submit">Submit</Button>
-        </Form>
-      </div>
+      <div className = "center"><Button style = {{backgroundColor: "#050505", color: "#FA6432", fontSize: "1.25rem", textAlign: "center"}} variant = "link" href="https://forms.gle/6vnJzu4nCagVm5sF6">Go to Form!</Button></div>
     </div>
   )
 }
