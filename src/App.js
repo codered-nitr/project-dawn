@@ -16,16 +16,9 @@ import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { withAuthentication } from './components/session'
 import Account from './components/account'
-import { ScaleLoader } from 'react-spinners'
-import OnImagesLoaded from 'react-on-images-loaded'
+import { withSplash } from './components/splash'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loading: false  //set true as initial
-    }
-  }
   render(){
     AOS.init({duration: 1000})
     return (
@@ -50,17 +43,4 @@ class App extends Component {
   }
 }
 
-const Loader = 
-  <div>
-    <Fly />
-    <div style = {{height: "100vh", display: "flex", alignItems: "center", justifyContent: "center"}}>
-      <ScaleLoader
-        height={125}
-        margin={15}
-        width={6}
-        color={"#FA3264"}
-      />
-    </div>
-  </div>
-
-export default withAuthentication(App);
+export default withSplash(withAuthentication(App));

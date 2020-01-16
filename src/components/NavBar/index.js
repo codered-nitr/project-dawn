@@ -53,7 +53,7 @@ class NavBar extends Component {
               {authUser?
                 <>
                   <Nav.Link style={{color: "whitesmoke", textAlign: "center", fontFamily: "Verdana, Geneva, Tahoma, sans-serif", font: "outline"}} href="/account">
-                    Hello, {this.state.displayName}!
+                    Hey, {this.state.displayName}!
                   </Nav.Link>
                   <span className = "logout" title = "Logout" style = {{marginLeft: "auto", marginRight: "auto"}}>
                     <MdSettingsPower style = {{cursor: "pointer"}} onClick = {this.props.firebase.doSignOut} />
