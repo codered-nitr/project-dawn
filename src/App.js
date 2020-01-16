@@ -23,7 +23,7 @@ class App extends Component {
     AOS.init({duration: 1000})
     return (
       <div className = "area">      
-        <Helmet><title>Code Red NIT-R</title></Helmet>
+        <Helmet><title>Code Red | NIT Rourkela</title></Helmet>
         <Router>
           <div className={isBrowser?"appBody":""}>
             <NavBar />
