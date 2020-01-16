@@ -8,6 +8,7 @@ import '../../css/apply.css'
 const Apply = () => {
   return(
     <div>
+      <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", maxWidth: "1000px"}}><Image src = {require('../../img/member.png')} /></div>
       {(isMobile)?
         <div>
           <Card style = {{width: "18rem", marginBottom: "10px", textAlign: "center"}}>
@@ -39,7 +40,6 @@ const Apply = () => {
         </div>
       :  
         <div>
-          <div className = "bottomPadding" style = {{marginLeft: "auto", marginRight: "auto", maxWidth: "1000px"}}><Image src = {require('../../img/member.png')} /></div>
           <Container data-aos = "fade-up">
             <div style = {{borderRadius: "5px", width: "80%", height: "max-content", marginLeft: "auto", marginRight: "0", marginBottom: "10px", backgroundColor: "whitesmoke", display: "flex"}}>
               <div style = {{display: "inline-block", width: "50%", width: "max-content"}}><Image style = {{maxHeight: "20rem"}} src = {require('../../img/hello there.png')}/></div>
@@ -75,7 +75,7 @@ const Apply = () => {
             </div>
           </Container>
         </div>}
-      <div className = "center"><Button style = {{backgroundColor: "#050505", color: "#FA6432", fontSize: "1.25rem", textAlign: "center"}} variant = "link" href="https://forms.gle/6vnJzu4nCagVm5sF6">Go to Form!</Button></div>
+      <div className = "center" style = {{color: "#FA6432"}}><h4>***Online applications will be live after Enigma 1.0 is over!***</h4></div>
     </div>
   )
 }
